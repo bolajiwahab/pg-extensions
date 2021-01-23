@@ -19,14 +19,19 @@ You can download the source code of  ``min_to_max`` from [this GitHub page](http
 ```sh
 git clone git@github.com:db-drive/pg-extensions.git
 ```
-
 Compile and install the extension
 ```sh
 cd pg-extensions/min_to_max
-make 
-make install
+sudo make 
+sudo make install
 ```
-
+You can as well extract the archive ``min_to_max--1.0.zip``
+```sh
+unzip min_to_max--1.0.zip -d /tmp/
+cd /tmp/min_to_max
+sudo make 
+sudo make install
+```
 ## Setup
 
 Create the extension using the ``CREATE EXTENSION`` command.
