@@ -38,7 +38,7 @@ Create the extension using the ``CREATE EXTENSION`` command.
 
 ```sql
 
-CREATE EXTENSION pg_stat_monitor;
+CREATE EXTENSION min_to_max;
 CREATE EXTENSION
 
 ```
@@ -47,7 +47,7 @@ CREATE EXTENSION
 
 This document describes the configuration, key features and usage of ``min_to_max`` extension.
 
-For how to install and set up ``min_to_max``, see [README](https://github.com/percona/pg_stat_monitor/blob/master/README.md).
+For how to install and set up ``min_to_max``, see [README](https://github.com/db-drive/pg-extensions/blob/main/min_to_max/README.md).
 
 After you've installed, create the ``min_to_max`` extension using the ``CREATE EXTENSION`` command.
 
