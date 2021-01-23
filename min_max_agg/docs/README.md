@@ -15,14 +15,14 @@ It works on text, date, timestamp, integer, numeric and float types. The output 
 
 ### Installing from source code
 
-You can download the source code of  ``min_to_max`` from [this GitHub page](https://github.com/Percona/pg_stat_monitor/releases) or using git:
+You can download the source code of  ``min_to_max`` from [this GitHub page](https://github.com/db-drive/pg-extensions.git) or using git:
 ```sh
-git clone git://github.com/Percona/pg_stat_monitor.git
+git clone git@github.com:db-drive/pg-extensions.git
 ```
 
 Compile and install the extension
 ```sh
-cd min_to_max
+cd pg-extensions/min_to_max
 make 
 make install
 ```
