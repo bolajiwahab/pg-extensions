@@ -25,7 +25,7 @@ cd pg-extensions/min_to_max
 sudo make 
 sudo make install
 ```
-You can as well extract the archive ``min_to_max--1.0.zip``
+You can as well download the archive from [min_to_max--1.0.zip](https://github.com/db-drive/pg-extensions/raw/main/min_to_max--1.0.zip) and extract with
 ```sh
 unzip min_to_max--1.0.zip -d /tmp/
 cd /tmp/min_to_max
