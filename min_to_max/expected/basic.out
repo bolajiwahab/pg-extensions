@@ -1,0 +1,62 @@
+CREATE EXTENSION min_to_max;
+SELECT min_to_max_config();
+ min_to_max_config 
+-------------------
+ 
+(1 row)
+
+SELECT pg_sleep(.5);
+ pg_sleep 
+----------
+ 
+(1 row)
+
+SELECT 1;
+ ?column? 
+----------
+        1
+(1 row)
+
+SELECT min_to_max(val) FROM (VALUES(NULL),(NULL)) t(val);
+ min_to_max 
+------------
+ 
+(1 row)
+
+SELECT min_to_max(val) FROM (VALUES(5),(10),(NULL)) t(val);
+ min_to_max 
+------------
+ 5 -> 10
+(1 row)
+
+SELECT min_to_max(val) FROM (VALUES(5),(3),(6),(7),(9),(10),(7)) t(val);
+ min_to_max 
+------------
+ 3 -> 10
+(1 row)
+
+SELECT min_to_max(val) FROM (VALUES('a'),('b'),(' ')) t(val);
+ min_to_max 
+------------
+   -> b
+(1 row)
+
+SELECT min_to_max_config('>>');
+ min_to_max_config 
+-------------------
+ 
+(1 row)
+
+SELECT min_to_max(val) FROM (VALUES(5),(3),(6),(7),(9),(10),(7)) t(val);
+ min_to_max 
+------------
+ 3 >> 10
+(1 row)
+
+SELECT min_to_max_config();
+ min_to_max_config 
+-------------------
+ 
+(1 row)
+
+DROP EXTENSION min_to_max;
